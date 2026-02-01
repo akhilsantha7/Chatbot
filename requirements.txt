@@ -10,9 +10,6 @@ langchain-community==0.0.38
 # OpenAI API
 openai==1.28.0
 
-# FAISS vectorstore
-faiss-cpu==1.13.2
-
 # Optional: environment management / async helpers
 python-dotenv==1.0.1
 

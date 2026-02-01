@@ -6,10 +6,14 @@ from pydantic import BaseModel
 from typing import List, Optional
 import asyncio
 from intents import handle_question
+from retriever import load_vectorstore  # import your loader
 
 # ------------------------
 # Models
 # ------------------------
+
+load_vectorstore() 
+
 class ChatRequest(BaseModel):
     question: str
     memory: Optional[List[str]] = []
