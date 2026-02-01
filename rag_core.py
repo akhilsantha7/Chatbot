@@ -3,9 +3,13 @@ import asyncio
 from typing import List
 from retriever import retrieve_context
 from langchain_openai import ChatOpenAI
+import os
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 # ⚠️ gpt-5-mini only supports default temperature=1
-llm = ChatOpenAI(model="gpt-5-mini")  # temperature is default 1
+llm = ChatOpenAI(model="gpt-5-mini", openai_api_key=OPENAI_API_KEY)  # temperature is default 1
 
 async def generate_answer(question: str, top_k: int = 3) -> str:
     """

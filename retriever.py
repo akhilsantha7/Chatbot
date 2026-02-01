@@ -1,8 +1,13 @@
 # retriever.py
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
+import os
 
-embeddings = OpenAIEmbeddings()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+
+embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 VECTORSTORE = None
 
 def load_vectorstore():
