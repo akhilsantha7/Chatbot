@@ -1,20 +1,14 @@
 # FastAPI web server
-fastapi==0.109.0
-uvicorn[standard]==0.23.2
+fastapi>=0.109.0
+uvicorn[standard]>=0.23.2
 
-# LangChain core
-langchain==1.2.7
-langchain-openai==0.3.35
-langchain-community==0.0.38
+# LangChain + OpenAI
+langchain>=1.2.7
+langchain-openai>=0.3.35
+langchain-community>=0.0.25
+openai>=1.28.0
 
-# OpenAI API
-openai==1.28.0
-
-# Optional: environment management / async helpers
-python-dotenv==1.0.1
-
-# Request handling
-httpx==0.24.1
-
-# Optional: for iOS SwiftUI testing via JSON API
-pydantic==2.3.0
+# Optional: async helpers
+python-dotenv>=1.0.1
+httpx>=0.24.1
+pydantic>=2.3.0
